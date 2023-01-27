@@ -22,7 +22,7 @@ $(".timeblock").each(function() {
     } else {
       $(this).addClass("future");
     }
-  });
+});
 
 // Allow a user to enter an event when they click a timeblock
 $(".task").on("focus", function() {
@@ -30,4 +30,11 @@ $(".task").on("focus", function() {
   });
   $(".task").on("blur", function() {
     $(this).parent().removeClass("editing");
-  });
+});
+
+// Save the event in local storage when the save button is clicked
+$(".fa-save").on("click", function() {
+    let event = $(this).siblings(".task").val();
+    let hour = $(this).parent().text().split(":")[0];
+    localStorage.setItem(`hour-${hour}`, event);
+});
