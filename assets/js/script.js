@@ -24,3 +24,10 @@ $(".timeblock").each(function() {
     }
   });
 
+// Allow a user to enter an event when they click a timeblock
+$(".task").on("focus", function() {
+    $(this).parent().addClass("editing");
+  });
+  $(".task").on("blur", function() {
+    $(this).parent().removeClass("editing");
+  });
