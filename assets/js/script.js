@@ -11,3 +11,16 @@ for (var i = 9; i < 18; i++) {
     $(".container").append(timeblock);
 }
 
+// Color-code each timeblock based on past, present, and future
+$(".timeblock").each(function() {
+    let hour = parseInt($(this).text().split(":")[0]);
+    let currentHour = moment().hour();
+    if (hour < currentHour) {
+      $(this).addClass("past");
+    } else if (hour === currentHour) {
+      $(this).addClass("present");
+    } else {
+      $(this).addClass("future");
+    }
+  });
+
