@@ -6,7 +6,7 @@ for (var i = 9; i < 18; i++) {
     var timeblock = $("<div>", { class: "timeblock row" });
     var timeblockHour = $("<div>", { class: "col-1" }).text(`${i}:00`);
     var task = $("<textarea>", { class: "task col-10" });
-    var saveBtn = $("<button>", { class: "fas fa-save col-1" });
+    var saveBtn = $("<button>", { class: "fas fa-save col-1 saveBtn" });
     timeblock.append(timeblockHour, task, saveBtn);
     $(".container").append(timeblock);
 }
