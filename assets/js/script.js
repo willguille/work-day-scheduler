@@ -38,3 +38,12 @@ $(".fa-save").on("click", function() {
     let hour = $(this).parent().text().split(":")[0];
     localStorage.setItem(`hour-${hour}`, event);
 });
+
+// Persist events between refreshes of a page
+$(".timeblock").each(function() {
+    let hour = $(this).text().split(":")[0];
+    let savedEvent = localStorage.getItem(`hour-${hour}`);
+    if (savedEvent) {
+      $(this).find(".task").val(savedEvent);
+    }
+  });
