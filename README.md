@@ -15,14 +15,14 @@ A simple calendar app for scheduling your work day.
 
 ## Usage
 
-1. Follow the [link](https://https://willguille.github.io/password-generator/)
+1. Follow the [link](https://willguille.github.io/work-day-scheduler/)
 2. View the current day at the top of the calendar.
 3. Scroll down to view the timeblocks for standard business hours.
 4. Click on a timeblock to enter an event.
 5. Click the save button to save the event in local storage.
 6. Refresh the page to view the persisted events.
 
-![Screenshot of the deployed page](images/screenshot-passgen.png)
+![Screenshot of the deployed page](assets/images/screencapture-workday-planner.jpg)
 
 ## License
 
